@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+    <title>Gallery</title>
+    <link href="mocha/dist/mocha.css" type="text/css" rel="stylesheet" charset="utf-8">
+    <script src="mocha/dist/mocha.js"></script>
+    <script src="sea-modules/seajs/seajs/2.1.1/sea.js"></script>
+    <script src="sea-modules/seajs/seajs-style/1.0.0/seajs-style.js"></script>
+    <script src="sea-modules/jquery/jquery/1.7.2/jquery.js"></script>
+    <script type="text/javascript">
+      seajs.config({
+        alias: {
+          '$': 'jquery/jquery/1.7.2/jquery',
+          'jquery': 'jquery/jquery/1.7.2/jquery'
+        },
+        map: [
+          function(url) {
+            var regex = /gallery\/([^\/]*?)\/\d+\..*?\/(.*)$/
+            if (regex.test(url)) {
+              url = url.replace('sea-modules/', '');
+              return url.replace(regex, '$1/dist/$2')
+            }
+            return url;
+          }
+        ]
+      });
+    </script>
+  </head>
+  <body>
+    <div id="mocha">Modules in Gallery</div>
+    <script>
+      (function() {
+        mocha.setup('bdd');
+
+        var modules = [
+          'backbone', 'expect', 'handlebars',
+          'jsuri', 'keymaster', 'respond',
+          'moment', 'mustache', 'scrollmonitor',
+          'sinon', 'store', 'swfobject',
+          'underscore', 'zepto', 'ztree', 'morris',
+          'mathjs', 'list', 'zeroclipboard', 'bootstrap',
+          'raphael', 'placeholders', 'keypress',
+          'formatter', 'spin', 'blueimp-md5', 'numeral',
+          'd3'
+        ]
+
+        var specs = []
+        for (var i = 0; i < modules.length; i++) {
+          specs[i] = './' + modules[i] + '/spec.js'
+        }
+
+        seajs.use(specs, function() {
+          if (window.mochaPhantomJS) {
+            mochaPhantomJS.run()
+          } else {
+            mocha.run()
+          }
+        })
+      })();
+    </script>
+  </body>
+</html>
