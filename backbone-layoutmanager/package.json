@@ -1,0 +1,36 @@
+{
+    "family": "arctic-cmd-repo",
+    "name": "backbone-layoutmanager",
+    "version": "0.9.5",
+    "title": "backbone.layoutmanager",
+    "description": "A layout and template manager for Backbone.js applications.",
+    "homepage": "http://layoutmanager.org",
+    "author": {
+        "name" : "Tim Branyen (@tbranyen)",
+        "url" : "http://layoutmanager.org"
+    },
+    "keywords": [
+        "layoutmanager"
+    ],
+    "licenses": "https://github.com/tbranyen/backbone.layoutmanager/blob/master/LICENSE",
+    "dependencies": {
+        "jquery": ">=1.6",
+        "underscore": ">=1.5",
+        "backbone": "~1.1",
+        "requirejs": "~2.1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git@github.com:tbranyen/backbone.layoutmanager.git"
+    },
+    "spm": {
+        "alias": {
+            "$": "$",
+            "underscore": "gallery/underscore/1.6.0/underscore",
+            "backbone": "gallery/backbone/1.1.2/backbone"
+        },
+        "output": [
+            "backbone.layoutmanager.js"
+        ]
+    }
+}
