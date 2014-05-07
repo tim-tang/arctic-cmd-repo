@@ -1,7 +1,7 @@
 {
-  "name": "gallery",
+  "name": "arctic-cmd-repo",
   "version": "1.0.0",
-  "description": "gallery",
+  "description": "Arctic CMD js repository",
   "dependencies": {
     "seajs": "*",
     "mocha": "*",
