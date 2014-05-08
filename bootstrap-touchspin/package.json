@@ -1,0 +1,29 @@
+{
+    "family": "arctic-cmd-repo",
+    "name": "bootstrap-touchspin",
+    "version": "2.8.0",
+    "title": "bootstrap-touchspin",
+    "description": "Bootstrap TouchSpin is a mobile and touch friendly input spinner component for Bootstrap 3.",
+    "homepage": "http://www.virtuosoft.eu/code/bootstrap-touchspin/",
+    "author": {
+        "name" : "istvan-ujjmeszaros",
+        "url" : "http://www.virtuosoft.eu"
+    },
+    "keywords": [
+        "bootstrap",
+        "touchspin"
+    ],
+    "licenses": "https://github.com/istvan-ujjmeszaros/bootstrap-touchspin/blob/master/LICENSE.md",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/istvan-ujjmeszaros/bootstrap-touchspin"
+    },
+    "spm": {
+        "alias": {
+            "$": "$",
+        },
+        "output": [
+            "bootstrap.touchspin.js"
+        ]
+    }
+}
