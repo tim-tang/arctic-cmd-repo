@@ -1,0 +1,30 @@
+{
+    "family": "arctic-cmd-repo",
+    "name": "bootstrap-jasny",
+    "version": "3.1.0",
+    "title": "jasny-bootstrap",
+    "description": "Additional features and components for Bootstrap",
+    "homepage": "http://jasny.github.io/bootstrap",
+    "author": {
+        "name" : "Jasny",
+        "url" : "http://www.jasny.net"
+    },
+    "keywords": [
+        "bootstrap",
+        "css"
+    ],
+    "licenses": "https://github.com/jasny/bootstrap/blob/master/LICENSE",
+    "repository": {
+        "type": "git",
+        "url": "git@github.com:dangrossman/bootstrap-daterangepicker.git"
+    },
+    "spm": {
+        "alias": {
+            "$": "$",
+            "bootstrap": "gallery/bootstrap/3.0.0"
+        },
+        "output": [
+            " jasny-bootstrap.js", "jasny-bootstrap.css"
+        ]
+    }
+}
