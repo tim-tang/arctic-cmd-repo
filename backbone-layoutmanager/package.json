@@ -25,7 +25,7 @@
     },
     "spm": {
         "alias": {
-            "$": "$",
+            "jquery": "$",
             "underscore": "gallery/underscore/1.6.0/underscore",
             "backbone": "gallery/backbone/1.1.2/backbone"
         },

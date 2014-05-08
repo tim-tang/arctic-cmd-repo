@@ -1,7 +1,4 @@
-define("arctic-cmd-repo/backbone-layoutmanager/0.9.5/backbone.layoutmanager-debug", [ "gallery/underscore/1.6.0/underscore-debug", "gallery/backbone/1.1.2/backbone-debug", "$-debug" ], function(require, exports) {
-    var previousUnderscore = this._;
-    this._ = require("gallery/underscore/1.6.0/underscore-debug");
-    var Backbone = require("gallery/backbone/1.1.2/backbone-debug");
+define("arctic-cmd-repo/backbone-layoutmanager/0.9.5/backbone.layoutmanager-debug", [ "gallery/backbone/1.1.2/backbone-debug", "gallery/underscore/1.6.0/underscore-debug", "$-debug" ], function(require, exports) {
     /*!
  * backbone.layoutmanager.js v0.9.5
  * Copyright 2013, Tim Branyen (@tbranyen)
@@ -9,16 +6,22 @@ define("arctic-cmd-repo/backbone-layoutmanager/0.9.5/backbone.layoutmanager-debu
  */
     (function(window, factory) {
         "use strict";
-        var Backbone = window.Backbone;
         // AMD. Register as an anonymous module.  Wrap in function so we have access
         // to root via `this`.
         if (typeof define === "function" && define.amd) {
             return define([ "backbone", "underscore", "jquery" ], function() {
                 return factory.apply(window, arguments);
             });
+        } else if (typeof exports === "object") {
+            var Backbone = require("gallery/backbone/1.1.2/backbone-debug");
+            var _ = require("gallery/underscore/1.6.0/underscore-debug");
+            // In a browserify build, since this is the entry point, Backbone.$
+            // is not bound. Ensure that it is.
+            Backbone.$ = Backbone.$ || require("$-debug");
+            module.exports = factory.call(window, Backbone, _, Backbone.$);
+        } else {
+            factory.call(window, window.Backbone, window._, window.Backbone.$);
         }
-        // Browser globals.
-        Backbone.Layout = factory.call(window, Backbone, window._, Backbone.$);
     })(typeof global === "object" ? global : this, function(Backbone, _, $) {
         "use strict";
         // Create a reference to the global object. In browsers, it will map to the
@@ -322,8 +325,11 @@ define("arctic-cmd-repo/backbone-layoutmanager/0.9.5/backbone.layoutmanager-debu
                 // Code path is less complex for Views that are not being inserted.  Simply
                 // remove existing Views and bail out with the assignment.
                 if (!insert) {
-                    // Ensure remove is called when swapping View's.
-                    root.removeView(name);
+                    // Ensure remove is called only when swapping in a new view (when the
+                    // view is the same, it does not need to be removed or cleaned up).
+                    if (root.getView(name) !== view) {
+                        root.removeView(name);
+                    }
                     // Assign to main views object and return for chainability.
                     return root.views[selector] = view;
                 }
@@ -602,8 +608,9 @@ define("arctic-cmd-repo/backbone-layoutmanager/0.9.5/backbone.layoutmanager-debu
             },
             // Configure a View to work with the LayoutManager plugin.
             setupView: function(views, options) {
-                // Don't break the options object (passed into Backbone.View#initialize).
-                options = options || {};
+                // Ensure that options is always an object, and clone it so that
+                // changes to the original object don't screw up this view.
+                options = _.extend({}, options);
                 // Set up all Views passed.
                 _.each(aConcat.call([], views), function(view) {
                     // If the View has already been setup, no need to do it again.
@@ -708,7 +715,7 @@ define("arctic-cmd-repo/backbone-layoutmanager/0.9.5/backbone.layoutmanager-debu
             },
             // By default, render using underscore's templating and trim output.
             renderTemplate: function(template, context) {
-                return trim(template(context));
+                return trim(template.call(this, context));
             },
             // By default, pass model attributes to the templates
             serialize: function() {
@@ -790,5 +797,4 @@ define("arctic-cmd-repo/backbone-layoutmanager/0.9.5/backbone.layoutmanager-debu
         // Assign `LayoutManager` object for AMD loaders.
         return LayoutManager;
     });
-    this._ = previousUnderscore;
 });

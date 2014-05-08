@@ -10,17 +10,18 @@ module.exports = function(grunt) {
                 transform: function(code) {
                     return [
                         'define(function(require, exports) {',
-                        'var previousUnderscore = this._;',
-                        "this._ = require('underscore');",
-                        "var Backbone = require('backbone');",
+                        //'var previousUnderscore = this._;',
+                        //"this._ = require('underscore');",
+                        //"var Backbone = require('backbone');",
                         code,
-                        "this._ = previousUnderscore;",
+                        //"this._ = previousUnderscore;",
                         "});"
                     ].join('\n');
                 }
             },
             src: {
-                url: 'https://raw.githubusercontent.com/tbranyen/backbone.layoutmanager/<%= pkg.version %>/backbone.layoutmanager.js',
+                //url: 'https://raw.githubusercontent.com/tbranyen/backbone.layoutmanager/<%= pkg.version %>/backbone.layoutmanager.js',
+                url: 'https://raw.githubusercontent.com/tbranyen/backbone.layoutmanager/master/backbone.layoutmanager.js',
                 name: 'backbone.layoutmanager.js'
             }
         }
