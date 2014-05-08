@@ -1,4 +1,7 @@
-define("arctic-cmd-repo/backbone-layoutmanager/0.9.5/backbone.layoutmanager-debug", [], function(require, exports, module) {
+define("arctic-cmd-repo/backbone-layoutmanager/0.9.5/backbone.layoutmanager-debug", [ "gallery/underscore/1.6.0/underscore-debug", "gallery/backbone/1.1.2/backbone-debug", "$-debug" ], function(require, exports) {
+    var previousUnderscore = this._;
+    this._ = require("gallery/underscore/1.6.0/underscore-debug");
+    var Backbone = require("gallery/backbone/1.1.2/backbone-debug");
     /*!
  * backbone.layoutmanager.js v0.9.5
  * Copyright 2013, Tim Branyen (@tbranyen)
@@ -787,4 +790,5 @@ define("arctic-cmd-repo/backbone-layoutmanager/0.9.5/backbone.layoutmanager-debu
         // Assign `LayoutManager` object for AMD loaders.
         return LayoutManager;
     });
+    this._ = previousUnderscore;
 });
