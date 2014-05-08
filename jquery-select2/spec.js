@@ -1,6 +1,7 @@
 define(function(require) {
 
   var $ = require("$");
+  var expect = require('expect');
   var Select2 = require('./dist/select2');
 
   describe('select2', function() {

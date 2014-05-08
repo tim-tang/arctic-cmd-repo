@@ -13,6 +13,7 @@
       seajs.config({
         alias: {
           '$': 'jquery/jquery/1.7.2/jquery',
+          '$-debug': 'jquery/jquery/1.7.2/jquery-debug',
           'jquery': 'jquery/jquery/1.7.2/jquery',
           'expect': 'gallery/expect/0.3.1/expect'
         },
@@ -23,6 +24,7 @@
               url = url.replace('sea-modules/', '');
               return url.replace(regex, '$1/dist/$2')
             }
+            console.log(url);
             return url;
           }
         ]
@@ -36,7 +38,9 @@
         mocha.setup('bdd');
 
         var modules = [
-          'backbone-layoutmanager'
+        'backbone-layoutmanager', 
+        'backbone-subroute',
+        'bootstrap-daterangepicker'
         ]
 
         var specs = []

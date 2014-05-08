@@ -17,7 +17,11 @@
       "seajs": "seajs/seajs/2.1.1/sea",
       "seajs-style": "seajs/seajs-style/1.0.0/seajs-style",
       "mocha": "gallery/mocha/1.18.2/mocha",
-      "expect": "gallery/expect/0.3.1/expect"
+      "expect": "gallery/expect/0.3.1/expect",
+      "underscore": "gallery/underscore/1.6.0/underscore",
+      "backbone": "gallery/backbone/1.1.2/backbone",
+      "moment": "gallery/moment/2.6.0/moment.js",
+      "bootstrap": "gallery/bootstrap/3.0.0"
     }
   }
 }

@@ -9,12 +9,8 @@ module.exports = function(grunt) {
                 dest: 'src',
                 transform: function(code) {
                     return [
-                        'define(function(require, exports) {',
-                        //'var previousUnderscore = this._;',
-                        //"this._ = require('underscore');",
-                        //"var Backbone = require('backbone');",
+                        'define(function(require, exports, module) {',
                         code,
-                        //"this._ = previousUnderscore;",
                         "});"
                     ].join('\n');
                 }

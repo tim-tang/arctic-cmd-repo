@@ -25,7 +25,8 @@
     },
     "spm": {
         "alias": {
-            "jquery": "$",
+            "jquery": "jquery/jquery/1.7.2/jquery",
+            "expect": "gallery/expect/0.3.1/expect",
             "underscore": "gallery/underscore/1.6.0/underscore",
             "backbone": "gallery/backbone/1.1.2/backbone"
         },

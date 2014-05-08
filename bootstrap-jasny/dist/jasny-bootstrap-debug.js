@@ -368,7 +368,7 @@ define("arctic-cmd-repo/bootstrap-jasny/3.1.0/jasny-bootstrap-debug", [ "$-debug
     /* ===========================================================
  * Bootstrap: inputmask.js v3.1.0
  * http://jasny.github.io/bootstrap/javascript/#inputmask
- * 
+ *
  * Based on Masked Input plugin by Josh Bush (digitalbush.com)
  * ===========================================================
  * Copyright 2012-2014 Arnold Daniels

@@ -1,4 +1,6 @@
-define("arctic-cmd-repo/backbone-subroute/0.4.2/backbone.subroute-debug", [ "gallery/underscore/1.6.0/underscore-debug", "gallery/backbone/1.1.2/backbone-debug", "$-debug" ], function(require, exports, module) {
+define("arctic-cmd-repo/backbone-subroute/0.4.2/backbone.subroute-debug", [ "gallery/backbone/1.1.2/backbone-debug", "gallery/underscore/1.6.0/underscore-debug", "$-debug" ], function(require, exports, module) {
+    this.Backbone = require("gallery/backbone/1.1.2/backbone-debug");
+    var previousBackbone = this.Backbone;
     // backbone-subroute.js v0.4.2
     //
     // Copyright (C) 2012 Dave Cadwallader, Model N, Inc.  
@@ -87,4 +89,6 @@ define("arctic-cmd-repo/backbone-subroute/0.4.2/backbone.subroute-debug", [ "gal
         });
         return Backbone.SubRoute;
     });
+    this.Backbone = previousBackbone;
+    module.exports = Backbone.SubRoute;
 });

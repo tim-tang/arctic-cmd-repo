@@ -1,4 +1,4 @@
-define("arctic-cmd-repo/backbone-layoutmanager/0.9.5/backbone.layoutmanager-debug", [ "gallery/backbone/1.1.2/backbone-debug", "gallery/underscore/1.6.0/underscore-debug", "$-debug" ], function(require, exports) {
+define("arctic-cmd-repo/backbone-layoutmanager/0.9.5/backbone.layoutmanager-debug", [ "gallery/backbone/1.1.2/backbone-debug", "gallery/underscore/1.6.0/underscore-debug", "$-debug", "jquery/jquery/1.7.2/jquery-debug" ], function(require, exports, module) {
     /*!
  * backbone.layoutmanager.js v0.9.5
  * Copyright 2013, Tim Branyen (@tbranyen)
@@ -17,7 +17,7 @@ define("arctic-cmd-repo/backbone-layoutmanager/0.9.5/backbone.layoutmanager-debu
             var _ = require("gallery/underscore/1.6.0/underscore-debug");
             // In a browserify build, since this is the entry point, Backbone.$
             // is not bound. Ensure that it is.
-            Backbone.$ = Backbone.$ || require("$-debug");
+            Backbone.$ = Backbone.$ || require("jquery/jquery/1.7.2/jquery-debug");
             module.exports = factory.call(window, Backbone, _, Backbone.$);
         } else {
             factory.call(window, window.Backbone, window._, window.Backbone.$);

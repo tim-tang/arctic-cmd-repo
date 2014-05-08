@@ -7,12 +7,22 @@ module.exports = function(grunt) {
         download: {
             options: {
                 dest: 'src',
+                transform: function(code) {
+                    return [
+                        'define(function(require, exports, module) {',
+                        //'var previousUnderscore = this._;',
+                        //"this._ = require('underscore');",
+                        "this.Backbone= require('backbone');",
+                        'var previousBackbone= this.Backbone;',
+                        code,
+                        //"this._ = previousUnderscore;",
+                        "this.Backbone= previousBackbone;",
+                        "module.exports = Backbone.SubRoute;",
+                        "});"
+                    ].join('\n');
+                }
             },
             src: {
-                options: {
-                    header: 'define(function(require, exports, module) {',
-                    footer: '});'
-                },
                 url: 'https://raw.githubusercontent.com/ModelN/backbone.subroute/<%= pkg.version %>/backbone.subroute.js',
                 name: 'backbone.subroute.js'
             }
