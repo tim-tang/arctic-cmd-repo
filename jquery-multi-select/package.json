@@ -1,0 +1,29 @@
+{
+    "family": "arctic-cmd-repo",
+    "name": "jquery-multi-select",
+    "version": "0.9.10",
+    "title": "jasny-bootstrap",
+    "description": "A user-friendlier drop-in replacement for the standard select with multiple attribute activated.",
+    "homepage": "http://loudev.com/",
+    "author": {
+        "name" : "louis cuny",
+        "url" : "http://lou.github.io"
+    },
+    "keywords": [
+        "jquery",
+        "multiselect"
+    ],
+    "licenses": "https://github.com/lou/multi-select/blob/master/LICENSE.txt",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/lou/multi-select"
+    },
+    "spm": {
+        "alias": {
+            "$": "$",
+        },
+        "output": [
+            "jquery.multi-select.js", "multi-select.css", "switch.png"
+        ]
+    }
+}

@@ -24,7 +24,7 @@
             "bootstrap": "gallery/bootstrap/3.0.0"
         },
         "output": [
-            " jasny-bootstrap.js", "jasny-bootstrap.css"
+            "jasny-bootstrap.js", "jasny-bootstrap.css"
         ]
     }
 }
