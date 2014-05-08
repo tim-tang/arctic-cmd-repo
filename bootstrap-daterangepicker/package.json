@@ -6,13 +6,10 @@
     "description": "Date Range Picker for Bootstrap",
     "homepage": "http://www.improvely.com",
     "author": {
-        "name" : "Dan Grossman",
-        "url" : "http://www.dangrossman.info"
+        "name": "Dan Grossman",
+        "url": "http://www.dangrossman.info"
     },
-    "keywords": [
-        "bootstrap",
-        "datarangepicker"
-    ],
+    "keywords": ["bootstrap", "datarangepicker"],
     "licenses": "http://www.apache.org/licenses/LICENSE-2.0",
     "dependencies": {
         "jquery": ">=1.10",
@@ -25,10 +22,9 @@
     "spm": {
         "alias": {
             "$": "$",
-            "moment": "gallery/moment/2.6.0/moment.js",
+            "moment": "gallery/moment/2.6.0/moment.js"
         },
-        "output": [
-            "daterangepicker.js", "daterangepicker-bs3.css"
-        ]
+        "output": ["daterangepicker.js", "daterangepicker-bs3.css"]
     }
 }
+

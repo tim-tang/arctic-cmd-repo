@@ -6,13 +6,10 @@
     "description": "A user-friendlier drop-in replacement for the standard select with multiple attribute activated.",
     "homepage": "http://loudev.com/",
     "author": {
-        "name" : "louis cuny",
-        "url" : "http://lou.github.io"
+        "name": "louis cuny",
+        "url": "http://lou.github.io"
     },
-    "keywords": [
-        "jquery",
-        "multiselect"
-    ],
+    "keywords": ["jquery", "multiselect"],
     "licenses": "https://github.com/lou/multi-select/blob/master/LICENSE.txt",
     "repository": {
         "type": "git",
@@ -20,10 +17,9 @@
     },
     "spm": {
         "alias": {
-            "$": "$",
+            "$": "$"
         },
-        "output": [
-            "jquery.multi-select.js", "multi-select.css", "switch.png"
-        ]
+        "output": ["jquery.multi-select.js", "multi-select.css", "switch.png"]
     }
 }
+

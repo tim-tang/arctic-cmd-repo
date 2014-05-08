@@ -14,7 +14,7 @@ module.exports = function(grunt) {
                         return [
                             'define(function(require, exports, module) {',
                             "var jQuery = require('$');",
-                            code
+                            code,
                             "});"
                         ].join('\n');
                     }

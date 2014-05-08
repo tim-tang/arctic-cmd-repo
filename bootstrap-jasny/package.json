@@ -6,13 +6,10 @@
     "description": "Additional features and components for Bootstrap",
     "homepage": "http://jasny.github.io/bootstrap",
     "author": {
-        "name" : "Jasny",
-        "url" : "http://www.jasny.net"
+        "name": "Jasny",
+        "url": "http://www.jasny.net"
     },
-    "keywords": [
-        "bootstrap",
-        "css"
-    ],
+    "keywords": ["bootstrap", "css"],
     "licenses": "https://github.com/jasny/bootstrap/blob/master/LICENSE",
     "repository": {
         "type": "git",
@@ -23,8 +20,7 @@
             "$": "$",
             "bootstrap": "gallery/bootstrap/3.0.0"
         },
-        "output": [
-            "jasny-bootstrap.js", "jasny-bootstrap.css"
-        ]
+        "output": ["jasny-bootstrap.js", "jasny-bootstrap.css"]
     }
 }
+

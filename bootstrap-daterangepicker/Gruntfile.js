@@ -23,7 +23,7 @@ module.exports = function(grunt) {
                 },
                 //note: can not be found by version.
                 url: 'https://raw.githubusercontent.com/dangrossman/bootstrap-daterangepicker/master/daterangepicker.js',
-                name: 'bootstrap.daterangepicker.js'
+                name: 'daterangepicker.js'
             },
             css: {
                 //options: {

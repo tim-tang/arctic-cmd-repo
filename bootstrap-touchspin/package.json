@@ -6,13 +6,10 @@
     "description": "Bootstrap TouchSpin is a mobile and touch friendly input spinner component for Bootstrap 3.",
     "homepage": "http://www.virtuosoft.eu/code/bootstrap-touchspin/",
     "author": {
-        "name" : "istvan-ujjmeszaros",
-        "url" : "http://www.virtuosoft.eu"
+        "name": "istvan-ujjmeszaros",
+        "url": "http://www.virtuosoft.eu"
     },
-    "keywords": [
-        "bootstrap",
-        "touchspin"
-    ],
+    "keywords": ["bootstrap", "touchspin"],
     "licenses": "https://github.com/istvan-ujjmeszaros/bootstrap-touchspin/blob/master/LICENSE.md",
     "repository": {
         "type": "git",
@@ -20,10 +17,9 @@
     },
     "spm": {
         "alias": {
-            "$": "$",
+            "$": "$"
         },
-        "output": [
-            "bootstrap.touchspin.js"
-        ]
+        "output": ["bootstrap.touchspin.js"]
     }
 }
+

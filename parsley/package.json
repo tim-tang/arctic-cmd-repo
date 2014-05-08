@@ -6,14 +6,10 @@
     "description": "Validate your forms, frontend, without writing a single line of javascript!",
     "homepage": "http://parsleyjs.org",
     "author": {
-        "name" : "Guillaume Potier",
-        "url" : "http://guillaumepotier.com/"
+        "name": "Guillaume Potier",
+        "url": "http://guillaumepotier.com/"
     },
-    "keywords": [
-        "parsley",
-        "form",
-        "validation"
-    ],
+    "keywords": ["parsley", "form", "validation"],
     "licenses": "https://raw.githubusercontent.com/guillaumepotier/Parsley.js/master/LICENSE",
     "repository": {
         "type": "git",
@@ -21,10 +17,9 @@
     },
     "spm": {
         "alias": {
-            "$": "$",
+            "$": "$"
         },
-        "output": [
-            "parsley.js"
-        ]
+        "output": ["parsley.js"]
     }
 }
+
