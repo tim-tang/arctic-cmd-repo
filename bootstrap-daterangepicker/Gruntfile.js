@@ -15,8 +15,7 @@ module.exports = function(grunt) {
                             'define(function(require, exports, module) {',
                             "var jQuery = require('$');",
                             "var moment = require('moment');",
-                            code.replace(/window\.jQuery/g, "jQuery"),
-                            code.replace(/window\.moment/g, "moment"),
+                            code.replace(/window\.jQuery/g, "jQuery").replace(/window\.moment/g, "moment"),
                             "});"
                         ].join('\n');
                     }

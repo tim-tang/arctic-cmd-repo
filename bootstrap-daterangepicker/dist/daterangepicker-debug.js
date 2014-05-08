@@ -738,5 +738,5 @@ define("arctic-cmd-repo/bootstrap-daterangepicker/1.3.6/daterangepicker-debug", 
             });
             return this;
         };
-    }(jQuery, window.moment);
+    }(jQuery, moment);
 });
