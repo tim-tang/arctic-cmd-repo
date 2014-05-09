@@ -1,4 +1,5 @@
-define("arctic-cmd-repo/parsley/2.0.0/parsley-debug", [], function(require, exports, module) {
+define("arctic-cmd-repo/parsley/2.0.0/parsley-debug", [ "$-debug" ], function(require, exports, module) {
+    var jQuery = require("$-debug");
     /*!
 * Parsleyjs
 * Guillaume Potier - <guillaume@wisembly.com>
@@ -1852,5 +1853,5 @@ define("arctic-cmd-repo/parsley/2.0.0/parsley-debug", [], function(require, expo
         if ("function" === typeof define && define.amd) define("parsley", function() {
             return window.Parsley;
         });
-    }(window.jQuery);
+    }(jQuery);
 });
