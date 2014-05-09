@@ -1,10 +1,10 @@
 define(function(require) {
-    var module = require('./dist/parsley-debug');
+    var Parsley = require('./dist/parsley');
     var expect = require('expect');
-    var jQuery = require('$');
+    var jquery = require('$');
     describe('parsley', function() {
         it('should has function', function() {
-            expect(module.validate).to.be.a('function');
+            expect($.fn.validate).to.be.a('function');
         });
     });
 });

@@ -1,5 +1,5 @@
 define(function(require) {
-    var module = require('./dist/bootstrap-jasny-debug');
+    var module = require('./dist/jasny-bootstrap-debug');
     var expect = require('expect');
     describe('bootstrap-jasny', function() {
         it('should has function', function() {

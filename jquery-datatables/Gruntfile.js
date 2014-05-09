@@ -11,7 +11,7 @@ module.exports = function(grunt) {
       src: {
         options: {
           header: [
-            'define("<%= pkg.family %>/<%= pkg.name %>/<%= pkg.version %>/datatables-debug", ["$-debug"], function(require) {',
+            'define("<%= pkg.family %>/<%= pkg.name %>/<%= pkg.version %>/datatables-debug", ["$-debug"], function(require, exports, module) {',
             '  var jQuery = require("$-debug"); '
           ].join('\n'),
           footer: '});'

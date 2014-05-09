@@ -24,6 +24,7 @@
               url = url.replace('sea-modules/', '');
               return url.replace(regex, '$1/dist/$2')
             }
+            console.log(url);
             return url;
           }
         ]
@@ -43,8 +44,8 @@
         'bootstrap-daterangepicker',
         'bootstrap-jasny',
         'bootstrap-touchspin',
-        'jquery-datatables',
-        'parsley'
+        'jquery-datatables'
+        //'parsley'
         ]
 
         var specs = []

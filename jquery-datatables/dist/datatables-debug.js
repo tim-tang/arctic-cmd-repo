@@ -1,4 +1,4 @@
-define("jquery-datatables/arctic-cmd-repo/1.9.4/datatables-debug", ["$-debug"], function(require) {
+define("jquery-datatables/arctic-cmd-repo/1.9.4/datatables-debug", ["$-debug"], function(require, exports, module) {
   var jQuery = require("$-debug"); 
 /**
  * @summary     DataTables
